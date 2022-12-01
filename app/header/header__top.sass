@@ -1,0 +1,125 @@
+.header__top
+	position: relative
+	font-size: $fz_top_menu
+	width: 100%
+	height: 110px
+	@media (max-width: $m)
+		height: 65px
+	> *
+		position: relative
+		z-index: 10
+	@media (max-width: $m)
+		font-size: $fz_top_menu_m
+		padding-bottom: 10px
+	&::after
+		position: absolute
+		content: ''
+		z-index: 5
+
+		top: 0
+		bottom: 0
+		left: -2000px
+		right: -2000px
+
+		background-color: $bc2
+		opacity: 0.5
+
+.header__top__item
+	height: 110px
+	@media (max-width: $m)
+		height: 65px
+	&.__title
+		padding-left: $ps
+		padding-right: $ps
+		@media (max-width: 935px) and (min-width: $m + 1px)
+			display: none
+	&.__lang
+		a
+			transition: 200ms 100ms top, 150ms 0ms opacity
+		&:hover
+			a
+				transition: 200ms 100ms top, 200ms 100ms opacity
+		span
+			position: relative
+			z-index: 10
+
+			width: 40px
+			height: 40px
+			padding-right: 10px
+			padding-left: 10px
+
+			&::before
+				position: absolute
+				content: ''
+
+				top: 0
+				left: 0
+				height: 40px
+				width: 40px
+
+				background-image: url('images/header/images/lang.png')
+				background-size: contain
+				background-repeat: no-repeat
+				background-position: center
+
+				transition: 300ms 300ms all
+		&:hover
+			span
+				height: 110px
+				&::before
+					opacity: 0
+					transition: 300ms 0ms all
+
+		a
+			position: absolute
+			z-index: 15
+			top: 10px
+			&.__ru
+				left: 10px
+			&.__en
+				left: 11px
+			&.__ua
+				left: 9px
+			@media (max-width: $m)
+				top: 18px
+				&.__ru
+					left: 9px
+				&.__en
+					left: 10px
+				&.__ua
+					left: 8px
+			&:first-child
+				z-index: 15
+			&:not(:first-child)
+				opacity: 0
+		@media (min-width: $m + 1px)
+			&:hover
+				a
+					opacity: 1
+				a:nth-child(1)
+					top: 15px
+				a:nth-child(2)
+					top: 45px
+				a:nth-child(3)
+					top: 75px
+		@media (max-width: $m)
+			&.h--active
+				a
+					opacity: 1
+				a:nth-child(2)
+					top: 40px
+				a:nth-child(3)
+					top: 60px
+
+	&.__m-menu-btn
+		@media (min-width: $m + 1px)
+			display: none
+	&:not(.__m-menu)
+		@media (max-width: $m)
+			display: none
+
+.__right-col .header__top__item
+	@media (min-width: $m + 1px)
+		padding-left: 24px
+		&:not(.__lang)
+			padding-right: 24px

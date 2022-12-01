@@ -1,0 +1,19 @@
+.strategy__img
+	width: 80%
+	margin-bottom: $p
+	display: block
+	margin-right: auto
+
+	overflow: hidden
+
+	&:nth-child(2n+1)
+		margin-left: auto
+		clip-path: polygon(0% 0%, 100% 0%, 96% 100%, 2% 96%)
+	&:nth-child(2n)
+		clip-path: polygon(0% 0%, 98% 2%, 100% 100%, 6% 96%)
+
+.strategy__img-mobile
+	max-width: 100%
+	clip-path: polygon(0% 0%, 100% 0%, 96% 100%, 2% 96%)
+	@media (min-width: $m + 1px)
+		display: none

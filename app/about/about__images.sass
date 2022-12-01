@@ -1,0 +1,18 @@
+.about__images
+	align-items: center
+	@media (max-width: 1250px)
+		justify-content: space-evenly
+	@media (max-width: $m)
+		display: none
+
+.about__image
+	height: 370px
+	overflow: hidden
+	&:nth-child(1)
+		clip-path: polygon(0% 0%, 96% 4%, 100% 98%, 2% 100%)
+	&:nth-child(2)
+		clip-path: polygon(4% 4%, 100% 0%, 98% 100%, 0% 100%)
+		@media (max-width: 1250px)
+			display: none
+	&:nth-child(3)
+		clip-path: polygon(0% 0%, 100% 4%, 98% 96%, 2% 100%)

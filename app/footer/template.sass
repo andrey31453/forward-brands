@@ -1,0 +1,27 @@
+.footer
+	padding-top: 0
+	padding-bottom: 0
+	.__container
+		padding-top: $psecs
+		padding-bottom: $psecs
+		position: relative
+		@media (max-width: $m)
+			padding-top: $psecs_m
+			padding-bottom: $psecs_m
+		&::before
+			position: absolute
+			content: ''
+
+			top: 0
+			left: 0
+			right: 0
+			height: 1px
+
+			background-color: $c2
+			transform: rotate(-3deg)
+			@media (max-width: 1350px)
+				left: 10%
+				right: 10%
+			@media (max-width: $m)
+				left: 10px
+				right: 10px

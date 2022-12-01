@@ -1,0 +1,36 @@
+.cooperation
+	padding-top: $psec
+	padding-bottom: $psec
+	text-align: center
+	background-color: $c2
+	color: $fc2
+
+	overflow: hidden
+	@media (min-width: $m + 1px)
+		clip-path: polygon(0% 6.5%, 100% 0%, 98% 100%, 1% 94%)
+	@media (max-width: $m)
+		padding: 40px 20px
+		clip-path: polygon(0% 10px, 100% 0%, calc(100% - 10px) 100%, 5px calc(100% - 10px))
+	.template-heading
+		@media (max-width: $m)
+			font-size: 17px
+			line-height: 20px
+			margin-bottom: $p
+
+.cooperation__wrapper
+	@media (max-width: $m)
+		padding: 0 $p
+
+.template-heading
+	max-width: 1050px
+	margin-left: auto
+	margin-right: auto
+	line-height: 68px
+	@media (max-width: $m)
+		line-height: 30px
+
+.cooperation__text
+	@media (min-width: $m + 1px)
+		margin-bottom: 40px
+	@media (max-width: $m)
+		margin-bottom: $p + $ps

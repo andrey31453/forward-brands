@@ -1,0 +1,16 @@
+.brands
+	background-color: $c3a
+	overflow: hidden
+	@media (min-width: $m + 1px)
+		padding-top: $psecs
+		clip-path: polygon(0% 0%, 100% 2%, 98% 100%, 2% 98%)
+	@media (max-width: $m)
+		padding-top: $psecs_m
+		clip-path: polygon(0% 0%, 100% 10px, calc(100% - 10px) 100%, 10px calc(100% - 10px))
+
+.brands__heading
+	text-align: center
+	@media (min-width: $m + 1px)
+		margin-bottom: $pl
+	@media (max-width: $m)
+		margin-bottom: $p

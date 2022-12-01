@@ -1,0 +1,62 @@
+.about__texts
+	padding-bottom: $pl
+	@media (max-width: $m)
+		text-align: center
+		padding-top: 0
+		padding-bottom: 0
+	.about__image
+		width: 100%
+		height: auto
+		margin: $psec_m auto
+		@media (min-width: $m + 1px)
+			display: none
+	& > *
+		@media (max-width: $m)
+			max-width: 468px
+
+.about__text
+	@media (min-width: $m + 1px)
+		padding: 60px 0 40px 0
+	@media (max-width: $m)
+		padding: 35px 0 $ps 0
+		width: 100%
+		line-height: $lh_m
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 0
+	&:not(.__contrast)
+		@media (min-width: $m + 1px)
+			line-height: 35px
+			width: 45%
+		@media (max-width: $m)
+			padding-left: $p
+			padding-right: $p
+		div
+			max-width: 470px
+			@media (max-width: $m)
+				max-width: 100%
+	&.__contrast
+		font-family: "circe-rounded-bold"
+		color: $fc2
+
+		overflow: hidden
+		background-color: $c3
+		@media (min-width: $m + 1px)
+			width: 55%
+			padding-left: 60px
+			padding-right: 50px
+
+			font-size: 36px
+			line-height: 44px
+
+			clip-path: polygon(0% 40px, 100% 0%, calc(100% - 20px) calc(100% - 20px), 40px 100%)
+		@media (max-width: $m)
+			padding-top: 40px
+			padding-bottom: 30px
+			padding-left: 20px
+			padding-right: 20px
+
+			font-size: 17px
+			clip-path: polygon(0% 20px, 100% 0%, calc(100% - 10px) calc(100% - 10px), 20px 100%)
+	span
+		color: $c2a

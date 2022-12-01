@@ -1,0 +1,44 @@
+.header
+	position: relative
+	overflow: hidden
+
+	padding-top: 0
+	padding-bottom: 0
+
+	color: $fc2
+	@media (min-width: $m + 1px)
+		clip-path: ellipse(120% 60% at 50% 40%)
+	@media (max-width: $m)
+		clip-path: ellipse(180% 60% at 50% 40%)
+	.__container
+		position: relative
+		z-index: 2
+	&::before
+		position: absolute
+		content: ''
+		z-index: 0
+
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+
+		background-image: url('images/header/images/background.jpg')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center top
+		filter: brightness(108%) contrast(100%) saturate(120%)
+		@media (max-width: $m)
+			background-image: url('images/header/images/background-mobile.jpg')
+	&::after
+		position: absolute
+		content: ''
+		z-index: 1
+
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+
+		background-color: $bc2
+		opacity: 0.4
